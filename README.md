@@ -240,8 +240,8 @@ After installing the corresponding dependencies, run the main_train.py file to t
 Run the main_test.py file to choose one of the three functions: device_identify, device_disconnect and device_access. 
 The  device_identify function can classify the data of devices in the query set based on the device information in the existing support set. 
 The device_disconnect function needs to determine the label of the device to be disconnected in advance and can delete all data in the support set corresponding to the label and classify the data of devices in the query set. 
-    
 The device_access function needs to provide the support set, query set, and an additional support set containing the data of the device to be connected, and can classify the data of devices in the query set by adding the data of the device to be connected to the support set.
+
 Run the main_use.py file to choose one of the three functions: device_identify, device_disconnect and device_access. 
 The device_identify function can classify the data of devices in the query set based on the device information in the existing support set. 
 The device_disconnect function needs to determine the label of the device to be disconnected in advance and the result is to delete all data in the support set corresponding to the label. 
