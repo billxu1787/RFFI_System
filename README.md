@@ -1,8 +1,7 @@
-# Project Introduction
-This is an implementation of an open-set RFFI system, 
-containing the code of the devices under test, the code of the receiver and the system implementation.
+# 项目介绍
+这是一个开集RFFI系统的实现，包含被测设备的代码、接收机的代码和系统实现。
     
-# Dependency
+# 环境配置
     # Name                    Version                   Build  Channel
     anyio                     4.3.0                    pypi_0    pypi
     argon2-cffi               23.1.0                   pypi_0    pypi
@@ -207,7 +206,7 @@ containing the code of the devices under test, the code of the receiver and the 
     zlib                      1.2.13               h8cc25b3_0    defaults
     zstd                      1.5.5                hd43e919_0    defaults
  
-# Directory Structure
+# 文件结构
 
     ├─README.md            
     ├─receiver
@@ -234,26 +233,25 @@ containing the code of the devices under test, the code of the receiver and the 
                 └─  utilities.h
                             
  
-# Instructions
-After installing the corresponding dependencies, run the main_train.py file to train the feature extractor, or use the pre-trained feature extractor temp.pth directly.
-    
-Run the main_test.py file to choose one of the three functions: device_identify, device_disconnect and device_access. 
-The  device_identify function can classify the data of devices in the query set based on the device information in the existing support set. 
-The device_disconnect function needs to determine the label of the device to be disconnected in advance and can delete all data in the support set corresponding to the label and classify the data of devices in the query set. 
-The device_access function needs to provide the support set, query set, and an additional support set containing the data of the device to be connected, and can classify the data of devices in the query set by adding the data of the device to be connected to the support set.
+# 介绍
+在安装相应的依赖项之后，运行main_train.py文件来训练特征提取器，或者直接使用预训练的特征提取器temp.pth。
 
-Run the main_use.py file to choose one of the three functions: device_identify, device_disconnect and device_access. 
-The device_identify function can classify the data of devices in the query set based on the device information in the existing support set. 
-The device_disconnect function needs to determine the label of the device to be disconnected in advance and the result is to delete all data in the support set corresponding to the label. 
-The device_access function needs to provide the support set, query set, and an additional support set containing the data of the device to be connected, and the result is to add the data of the device to be connected to the support set.
+运行main_test.py文件，从三个函数中选择一个：device_identify、device_disconnect和device_access。
+device_identify函数可以根据现有支持集中的设备信息对查询集中的设备数据进行分类。
+device_disconnect函数需要提前确定要断开连接的设备的标签，可以删除该标签对应的支持集中的所有数据，并对查询集中的设备数据进行分类。
+device_access函数需要提供支持集、查询集和包含待接入设备数据的附加支持集，并可以通过将待接入设备的数据添加到支持集中来对查询集中设备的数据进行分类。
+
+运行main_use.py文件，从三个函数中选择一个：device_identify、device_disconnect和device_access。
+device_identify函数可以根据现有支持集中的设备信息对查询集中的设备数据进行分类。
+device_disconnect函数需要提前确定待断开连接的设备的标签，其结果是删除该标签对应的支持集中的所有数据。
+device_access函数需要提供支持集、查询集和包含待接入设备数据的附加支持集，其结果是将待接入设备的数据添加到支持集中。
  
- 
-# Code Source
-The codes of the transmitter and receiver we used were modified based on the codes provided on the following two websites respectively.
+# 代码来源
+我们使用的发射器和接收器的代码分别是根据以下两个网站提供的代码进行修改的。
 
-[Transmitter code source](https://www.ebyte.com/pdf-down/3298.html) 
+[发射机代码来源](https://www.ebyte.com/pdf-down/3298.html) 
 
-[Receiver code source](https://github.com/jkadbear/LoRaPHY)
+[接收机代码来源](https://github.com/jkadbear/LoRaPHY)
  
  
  
