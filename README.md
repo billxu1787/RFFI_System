@@ -4,13 +4,7 @@
     
 # 文件结构
 
-    ├─README.md            
-    ├─receiver
-    │   ├─dummy_sdr_sig.m
-    │   ├─LoRaPHY.m
-    │   ├─lora_sdr_receiver.m
-    │   ├─sdr_initial.m
-    │   └─simulation.m   
+    ├─README.md              
     ├─system
     │   ├─client.py
     │   ├─dataset_utils.py
