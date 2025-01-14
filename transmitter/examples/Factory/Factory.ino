@@ -546,7 +546,7 @@ void setup()
         Serial.println(F("Selected output power is invalid for this module!"));
     }
 
-    // set bandwidth to 250 kHz
+    // set bandwidth to 125 kHz
     if (radio.setBandwidth(125.0) == RADIOLIB_ERR_INVALID_BANDWIDTH)
     {
         Serial.println(F("Selected bandwidth is invalid for this module!"));
@@ -571,7 +571,7 @@ void setup()
     {
         Serial.println(F("[Radio] Received packet failed!"));
     }
-    // 设置spreadfactor，这需要根据你的具体需求和模块规格来确定
+    // set spreadfactor as 7
     radio.setSpreadingFactor(7.0);
 }
 
